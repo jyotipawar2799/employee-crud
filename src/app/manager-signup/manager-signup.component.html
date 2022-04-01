@@ -1,0 +1,84 @@
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-9">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-md-1"></div>
+              <div class="col-lg-10">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <h4 class="mt-1 mb-3 pb-1">Manager Signup</h4>
+                  </div>
+
+                  <form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
+                    <div class="login-form">
+                        <div class="row">
+                            <div class="col-md-6 mt-2">
+                                <label>First Name <span class="req">*</span></label>
+                                <input type="text" class="form-control" placeholder="First Name" formControlName="firstname">
+                                <div class="validation-error" *ngIf="signupForm.controls['firstname'].hasError('required') 
+                                   && signupForm.controls['firstname'].touched && signupForm.controls['firstname'].dirty">
+                                  First Name is required
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Last Name <span class="req">*</span></label>
+                                <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname">
+                                <div class="validation-error" *ngIf="signupForm.controls['lastname'].hasError('required') 
+                                    && signupForm.controls['lastname'].touched && signupForm.controls['lastname'].dirty">
+                                  Last Name is required
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Email Address<span class="req">*</span></label>
+                                <input type="email" formControlName="email" class="form-control" placeholder="Email Address" >
+                                <div class="validation-error" *ngIf="signupForm.controls['email'].hasError('required') 
+                                    && signupForm.controls['email'].touched && signupForm.controls['email'].dirty">
+                                  Email is required
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Password <span class="req">*</span></label>
+                                <input type="password"  class="form-control" placeholder="Password" formControlName="password">
+                                <div class="validation-error" *ngIf="signupForm.controls['password'].hasError('required') 
+                                    && signupForm.controls['password'].touched && signupForm.controls['password'].dirty">
+                                  Password is required
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Address <span class="req">*</span></label>
+                                <input type="text"  class="form-control" placeholder="Address" formControlName="address">
+                                <div class="validation-error" *ngIf="signupForm.controls['address'].hasError('required') 
+                                    && signupForm.controls['address'].touched && signupForm.controls['address'].dirty">
+                                  Address is required
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Birth Date <span class="req">*</span></label>
+                                <input type="date"  class="form-control" placeholder="Birth Date" formControlName="birthdate">
+                                <div class="validation-error" *ngIf="signupForm.controls['birthdate'].hasError('required') 
+                                    && signupForm.controls['birthdate'].touched && signupForm.controls['birthdate'].dirty">
+                                  Birth Date is required
+                                </div>
+                            </div>
+                            <div class="col-12 m-3">
+                              <div class="text-center pt-1 mb-5 pb-1">
+                                <button [disabled]="signupForm.invalid" type="submit" 
+                                class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Sign Up</button>
+                                <a routerLink="/" class="singIn">Sign In</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

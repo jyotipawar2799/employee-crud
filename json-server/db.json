@@ -1,0 +1,27 @@
+{
+  "manager": [
+    {
+      "firstname": "test",
+      "lastname": "test",
+      "email": "test@gmail.com",
+      "password": "U2FsdGVkX1/4GvUIA8h7hZW2qmAcnv5iEhGt7Rq8yXs=",
+      "address": "test",
+      "birthdate": "2022-03-30",
+      "id": 3
+    }
+  ],
+  "employee": [
+    {
+      "firstname": "jyoti",
+      "lastname": "pawar",
+      "address": "pune",
+      "birthdate": "2022-03-23",
+      "mobile": 9876543210,
+      "city": "pune",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
